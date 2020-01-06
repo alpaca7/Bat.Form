@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E5645DA-4158-405C-BF3F-90BAC7EFA091}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bat.PostprocessingForm</RootNamespace>
+    <AssemblyName>Bat.PostprocessingForm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bat.Fea">
+      <HintPath>..\Bin\Bat.Fea.dll</HintPath>
+    </Reference>
+    <Reference Include="Bat.UI.2014">
+      <HintPath>..\Bin\Bat.UI.2014.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="00 Common\SectionAcorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00 Common\SectionAcorForm.Designer.cs">
+      <DependentUpon>SectionAcorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="00 Common\SteelAreaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00 Common\SteelAreaForm.Designer.cs">
+      <DependentUpon>SteelAreaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatShellFormAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="02 偏心受压计算\CompressionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02 偏心受压计算\CompressionForm.Designer.cs">
+      <DependentUpon>CompressionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07 抗剪计算\TorsionMomentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07 抗剪计算\TorsionMomentForm.Designer.cs">
+      <DependentUpon>TorsionMomentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01 桩长计算\PileLengthCalculationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01 桩长计算\PileLengthCalculationForm.Designer.cs">
+      <DependentUpon>PileLengthCalculationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="05 横向分布计算\GangJieMethonForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05 横向分布计算\GangJieMethonForm1.Designer.cs">
+      <DependentUpon>GangJieMethonForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03 裂缝宽度计算\CracksCheckingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03 裂缝宽度计算\CracksCheckingForm.Designer.cs">
+      <DependentUpon>CracksCheckingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04 风荷载计算\WindLoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04 风荷载计算\WindLoadForm.Designer.cs">
+      <DependentUpon>WindLoadForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="00 Common\SectionAcorForm.resx">
+      <DependentUpon>SectionAcorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="00 Common\SteelAreaForm.resx">
+      <DependentUpon>SteelAreaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="02 偏心受压计算\CompressionForm.resx">
+      <DependentUpon>CompressionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07 抗剪计算\TorsionMomentForm.resx">
+      <DependentUpon>TorsionMomentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01 桩长计算\PileLengthCalculationForm.resx">
+      <DependentUpon>PileLengthCalculationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05 横向分布计算\GangJieMethonForm1.resx">
+      <DependentUpon>GangJieMethonForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03 裂缝宽度计算\CracksCheckingForm.resx">
+      <DependentUpon>CracksCheckingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04 风荷载计算\WindLoadForm.resx">
+      <DependentUpon>WindLoadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="06 群桩反力计算\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\box.bmp" />
+    <Content Include="Resources\rec.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
