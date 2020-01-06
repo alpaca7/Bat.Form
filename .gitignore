@@ -3,4 +3,4 @@ Bat.PostprocessingForm/obj/
 Demo/obj/
 Debug/
 Release/
-*.suo
+.vs/

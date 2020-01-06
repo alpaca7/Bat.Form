@@ -15,7 +15,7 @@ namespace Demo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Bat.Shell.PostprocessingForm.WindLoadForm());
+            Application.Run(new Bat.Shell.PostprocessingForm.PileLengthCalculationForm());
         }
     }
 }
