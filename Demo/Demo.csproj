@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2F7F766D-9A39-48C3-AA66-C4EDFA2AF92D}</ProjectGuid>
+    <ProjectGuid>{47DAAE49-3CE6-41FE-BFD7-E25DEF90A0DA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Demo</RootNamespace>
     <AssemblyName>Demo</AssemblyName>
@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bat.PostprocessingForm">
+      <HintPath>..\..\Bin\Release\Bat.PostprocessingForm.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,12 +67,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Bat.PostprocessingForm\Bat.PostprocessingForm.csproj">
-      <Project>{9e5645da-4158-405c-bf3f-90bac7efa091}</Project>
-      <Name>Bat.PostprocessingForm</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
